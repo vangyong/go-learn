@@ -1,6 +1,6 @@
 package main
 
-import "./grammar"
+import . "grammar"
 
 func main() {
 
@@ -13,8 +13,8 @@ func main() {
 	//	printStruct(book1)
 
 	//数组
-	printArray()
+	// PrintArray()
 
 	//循环遍历计算
-	//	printRangeSum()
+	PrintRangeSum()
 }

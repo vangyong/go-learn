@@ -9,7 +9,7 @@ const (
 )
 
 //基本类型变量
-func printBaseVariable() {
+func PrintBaseVariable() {
 	var (
 		userName  string = "xiaoxiao"
 		age       uint32
@@ -32,14 +32,14 @@ func printBaseVariable() {
 
 //数组
 //函数 1.使用驼峰命名 2.如果包外不需要访问用小写开头的函数 3.包外需要访问使用大写开头
-func printArray() {
+func PrintArray() {
 	var balance = [5]float32{200.0, 78.1}
 	fmt.Println(balance)
 	fmt.Printf("len:%d cap:%d slice=%v\n", len(balance), cap(balance), balance)
 }
 
 //指针
-func printPointer() {
+func PrintPointer() {
 	var a3 int = 20
 	var ip *int
 	ip = &a3
@@ -49,7 +49,7 @@ func printPointer() {
 }
 
 //引用类型变量和值类型变量
-func printVariableDifferent() {
+func PrintVariableDifferent() {
 	var a1 string = "abcd"
 	var a2 string = a1
 	fmt.Println(&a1)

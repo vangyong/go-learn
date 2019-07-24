@@ -1,21 +1,12 @@
-package main
+package capture
 
 import "fmt"
 import "io/ioutil"
 import "goshark"
 import "golibwireshark"
 
-func main() {
-	// var numbers = []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
-	// printSlice(numbers)
-
-	// nums := []int{2, 3, 4}
-	// sum := 0
-	// for _, num := range nums {
-	// 	sum += num
-	// }
-	// fmt.Println("sum:", sum)
-
+//打印抓包数据
+func PrintPcap() {
 	file := "E:\testfile\2019-04-23 14_12_45-HTTP.pcap"
 	d := goshark.NewDecoder()
 	if err := d.DecodeStart(file); err != nil {
@@ -35,9 +26,4 @@ func main() {
 	if ok {
 		fmt.Printf("key: %s\nvalue: %s\n", key, value)
 	}
-}
-
-//打印数组
-func printSlice(x []int) {
-	fmt.Printf("len%d cap=%d slice=%v\n", len(x), cap(x), x)
 }

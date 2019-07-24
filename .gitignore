@@ -1,6 +1,15 @@
 .DS_Store
+<<<<<<< HEAD
 
 # Editor directories and files
 .idea
 *.exe
+=======
+#dist/
+*.exe
+*.*.exe
+
+# Editor directories and files
+.idea
+>>>>>>> 4c6714bff982b91b83c7e5d29b7928ad8f0193ad
 

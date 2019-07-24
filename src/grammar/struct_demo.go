@@ -11,7 +11,7 @@ type Book struct {
 }
 
 //结构体作为函数参数传递
-func printStruct(book Book) {
+func PrintStruct(book Book) {
 	fmt.Printf("Book title : %s\n", book.title)
 	fmt.Printf("Book author : %s\n", book.author)
 	fmt.Printf("Book subject : %s\n", book.subject)

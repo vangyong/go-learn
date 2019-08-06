@@ -1,4 +1,4 @@
-package capture
+package utils
 
 import "fmt"
 import "io/ioutil"
@@ -6,8 +6,9 @@ import "goshark"
 import "golibwireshark"
 
 //打印抓包数据
-func PrintPcap() {
-	file := "E:\testfile\2019-04-23 14_12_45-HTTP.pcap"
+func PrintPcap(filePath string) {
+	//	file := "E:\testfile\2019-04-23 14_12_45-HTTP.pcap"
+	file := filePath
 	d := goshark.NewDecoder()
 	if err := d.DecodeStart(file); err != nil {
 		log.Println("Decode start fail:", err)

@@ -1,4 +1,4 @@
-package main
+package grammar
 
 import (
 	"fmt"
@@ -6,8 +6,9 @@ import (
 	"sync"
 )
 
-func main() {
-	runtime.GOMAXPROCS(runtime.NumCPU())
+func WaitGroup_test() {
+	fmt.Println(runtime.NumCPU())
+	//runtime.GOMAXPROCS(runtime.NumCPU())
 	wg := sync.WaitGroup{}
 	wg.Add(10)
 	for i := 0; i < 10; i++ {

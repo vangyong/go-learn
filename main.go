@@ -5,6 +5,10 @@ import "fmt"
 
 func main() {
 
+	//引用类型和值类型
+	PrintVariableDifferent()
+	fmt.Println("PrintVariableDifferent end")
+
 	//结构
 	//	var book1 Book
 	//	book1.author = ""
@@ -42,6 +46,6 @@ func main() {
 	//	fmt.Println(x, y, x+y)
 
 	//并发-sync.WaitGroup
-	WaitGroup_test()
-	fmt.Println("WaitGroup_test end")
+	//	WaitGroup_test()
+	//	fmt.Println("WaitGroup_test end")
 }

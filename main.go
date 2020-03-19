@@ -1,13 +1,10 @@
 package main
 
-import . "grammar"
-import "fmt"
-
 func main() {
 
 	//引用类型和值类型
-	PrintVariableDifferent()
-	fmt.Println("PrintVariableDifferent end")
+	//PrintVariableDifferent()
+	//fmt.Println("PrintVariableDifferent end")
 
 	//结构
 	//	var book1 Book
@@ -28,10 +25,10 @@ func main() {
 	//	var sum = sumSlice(numbers)
 
 	//接口
-	//	pc := PhoneConnector{"PhoneConnecter"}
-	//	var a Connector
-	//	a = Connector()
-	//	a.Connect()
+	pc := PhoneConnector{"PhoneConnecter"}
+	var a Connector
+	a = Connector()
+	a.Connect()
 
 	//并发-goroutine
 	//	go GoroutineSay("world")

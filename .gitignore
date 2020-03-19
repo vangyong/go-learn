@@ -1,8 +1,5 @@
 .DS_Store
 
 # Editor directories and files
-#dist/
-*.exe
-*.*.exe
-.idea/*
-.idea/workspace.xml
+# idea ignore
+.idea/

@@ -7,7 +7,7 @@ import (
 
 func GoroutineSay(s string) {
 	for i := 0; i < 5; i++ {
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(1 * time.Second)
 		fmt.Println(s)
 	}
 }

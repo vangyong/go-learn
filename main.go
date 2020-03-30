@@ -1,5 +1,9 @@
 package main
 
+import (
+	. "grammar"
+)
+
 func main() {
 
 	//引用类型和值类型
@@ -25,14 +29,14 @@ func main() {
 	//	var sum = sumSlice(numbers)
 
 	//接口
-	pc := PhoneConnector{"PhoneConnecter"}
-	var a Connector
-	a = Connector()
-	a.Connect()
+	//pc := PhoneConnector{"PhoneConnecter"}
+	//var a Connector
+	//a = Connector()
+	//a.Connect()
 
 	//并发-goroutine
-	//	go GoroutineSay("world")
-	//	GoroutineSay("hello")
+	go GoroutineSay("world")
+		GoroutineSay("hello")
 
 	//并发-channel
 	//	s := []int{7, 2, 8, -9, 4, 0}

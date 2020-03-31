@@ -1,14 +1,15 @@
 package main
 
 import (
-	. "grammar"
+	"fmt"
+	grammar "go-learn/grammar"
 )
 
 func main() {
 
 	//引用类型和值类型
-	//PrintVariableDifferent()
-	//fmt.Println("PrintVariableDifferent end")
+	grammar.PrintVariableDifferent()
+	fmt.Println("PrintVariableDifferent end")
 
 	//结构
 	//	var book1 Book
@@ -35,8 +36,8 @@ func main() {
 	//a.Connect()
 
 	//并发-goroutine
-	go GoroutineSay("world")
-		GoroutineSay("hello")
+	//go GoroutineSay("world")
+	//	GoroutineSay("hello")
 
 	//并发-channel
 	//	s := []int{7, 2, 8, -9, 4, 0}

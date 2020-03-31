@@ -3,3 +3,5 @@
 # Editor directories and files
 # idea ignore
 .idea/
+.idea/workspace.xml
+

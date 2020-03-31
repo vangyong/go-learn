@@ -1,4 +1,4 @@
-package server
+package nats
 
 import (
 	"flag"
@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	//url   = "nats://192.168.3.125:4222"
+	//url   = "nats://127.0.0.1:4222"
 	url = nats.DefaultURL
 )
 

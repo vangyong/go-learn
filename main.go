@@ -8,8 +8,8 @@ import (
 func main() {
 
 	//引用类型和值类型
-	grammar.PrintVariableDifferent()
-	fmt.Println("PrintVariableDifferent end")
+	//grammar.PrintVariableDifferent()
+	//fmt.Println("PrintVariableDifferent end")
 
 	//结构
 	//	var book1 Book
@@ -40,14 +40,14 @@ func main() {
 	//	GoroutineSay("hello")
 
 	//并发-channel
-	//	s := []int{7, 2, 8, -9, 4, 0}
-	//	c := make(chan int)
-	//	go ChannelSum(s[:len(s)/2], c)
-	//	go ChannelSum(s[len(s)/2:], c)
-	//	x, y := <-c, <-c // 从通道 c 中接收
-	//	fmt.Println(x, y, x+y)
+	//s := []int{7, 2, 8, -9, 4, 0}
+	//c := make(chan int)
+	//go grammar.ChannelSum(s[:len(s)/2], c)
+	//go grammar.ChannelSum(s[len(s)/2:], c)
+	//x, y := <-c, <-c   //从通道 c 中接收
+	//fmt.Println(x, y, x+y)
 
 	//并发-sync.WaitGroup
-	//	WaitGroup_test()
-	//	fmt.Println("WaitGroup_test end")
+	grammar.WaitGroupTest()
+	fmt.Println("WaitGroupTest end")
 }

@@ -4,4 +4,4 @@
 # idea ignore
 .idea/
 .idea/workspace.xml
-
+.idea/*

@@ -27,6 +27,7 @@ func PrintBaseVariable() {
 	fmt.Println(address)
 	fmt.Println(foreigner)
 	fmt.Println("const 静态变量:")
+	fmt.Println(utimePos)
 	fmt.Println(stimePos)
 }
 

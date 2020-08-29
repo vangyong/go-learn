@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5973abc8-a386-4be7-b6b6-be5cc2a42645" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
       <change beforePath="$PROJECT_DIR$/grammar/WaitGroup_demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/sync_demo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/channel_demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/channel_demo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/cycle_branch_demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/range_demo.go" afterDir="false" />
@@ -10,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/grammar/slice_demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/slice_demo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/variable_demo.go" beforeDir="false" afterPath="$PROJECT_DIR$/grammar/variable_demo.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +20,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
+  <component name="GOROOT" path="/usr/local/go" />
+=======
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
@@ -59,12 +65,16 @@
     </replaceStrings>
   </component>
   <component name="GOROOT" path="D:\developTools\Go" />
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1ZtS5QV3aCk2Gw6WIM84fm9Zfe4" />
+=======
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -110,7 +120,9 @@
       <pane id="Scope" />
     </panes>
   </component>
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -119,10 +131,20 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$/grammar" />
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/elasticsearch" />
+      <recent name="$PROJECT_DIR$/message/nats" />
+    </key>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -141,18 +163,41 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="RunManager" selected="Go Build.go build go-learn">
+    <configuration name="go build go-learn" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-learn" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="go-learn" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+=======
   <component name="RunManager">
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-learn" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
+<<<<<<< HEAD
+      <filePath value="$PROJECT_DIR$/web/main.go" />
+=======
       <filePath value="$PROJECT_DIR$/main.go" />
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
       <package value="go-learn" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
+        <item itemvalue="Go Build.go build go-learn" />
+        <item itemvalue="Go Build.go build main.go" />
+      </list>
+    </recent_temporary>
+=======
         <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
@@ -190,14 +235,30 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.cn/</proxy>
   </component>
+<<<<<<< HEAD
+=======
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/utils/excel_util.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -341,4 +402,5 @@
       </provider>
     </entry>
   </component>
+>>>>>>> 4f2c7b499ee08ed03267cbf68df7fd115801c154
 </project>

@@ -6,19 +6,18 @@ import (
 	"sync"
 )
 
-func SyncWaitGroupTest() {
-	fmt.Println("cpus:" )
+func WaitGroupTest() {
 	fmt.Println(runtime.NumCPU())
-	runtime.GOMAXPROCS(runtime.NumCPU())
+	//runtime.GOMAXPROCS(runtime.NumCPU())
 	wg := sync.WaitGroup{}
 	wg.Add(10)
 	for i := 0; i < 10; i++ {
-		go GoSyncTest(&wg, i)
+		go GoTest(&wg, i)
 	}
 	wg.Wait()
 }
 
-func GoSyncTest(wg *sync.WaitGroup, index int) {
+func GoTest(wg *sync.WaitGroup, index int) {
 	a := 1
 	for i := 0; i < 1000; i++ {
 		a += i

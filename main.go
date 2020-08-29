@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"go-learn/grammar"
 )
 
@@ -31,12 +30,12 @@ func main() {
 	//fmt.Println(sum)
 
 	//接口
-	var connector grammar.Connector
-	connector = new(grammar.PhoneConnector)
-	var a = connector.SetName("PC name")
-	fmt.Printf(a)
-	fmt.Printf(connector.GetName())
-	connector.Connect()
+	//var connector grammar.Connector
+	//connector = new(grammar.PhoneConnector)
+	//var a = connector.SetName("PC name")
+	//fmt.Printf(a)
+	//fmt.Printf(connector.GetName())
+	//connector.Connect()
 
 	//map
 	//grammar.RangePrintMap()
@@ -74,4 +73,9 @@ func main() {
 	// WaitGroup变量定义后，是不允许被拷贝的，即不允许作为函数参数或者赋值给其他变量
 	//grammar.WaitGroupTest()
 	//fmt.Println("WaitGroupTest end")
+
+
+	// UDP服务
+	address := "0.0.0.0:8000"
+	grammar.UdpServer(address)
 }

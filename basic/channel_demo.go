@@ -1,4 +1,4 @@
-package grammar
+package basic
 
 func ChannelSum(s []int, c chan int) {
 	sum := 0

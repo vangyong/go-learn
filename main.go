@@ -7,36 +7,48 @@ import (
 
 func main() {
 
-	//引用类型和值类型
-	//basic.PrintVariableDifferent()
-	//fmt.Println("PrintVariableDifferent end")
+	// 基本数据类型
+	//basic.PrintBaseVariable()
 
-	//结构
-	//	var book1 Book
-	//	book1.author = ""
-	//	book1.author = "www.runoob.com"
-	//	book1.subject = "Go 语言教程"
-	//	book1.bookId = 6495407
-	//	printStruct(book1)
+	//引用类型和值类型
+	//basic.PrintDifferentVariable()
+	//fmt.Println("PrintDifferentVariable end")
 
 	//数组
-	// PrintArray()
+	//basic.PrintArray()
+
+	//结构
+	//var book1 basic.Book
+	//book1.Author = ""
+	//book1.Author = "www.runoob.com"
+	//book1.Subject = "Go 语言教程"
+	//book1.BookId = 6495407
+	//basic.PrintStruct(book1)
 
 	//循环遍历计算
-	//	SumRange()
+	//basic.SumRange()
 
-	//切片
+	//切片(自动增长缩小)
 	//var numbers = []int{0, 1, 2, 3, 4, 5, 6, 7, 8}
 	//var sum = basic.SumSlice(numbers)
 	//fmt.Println(sum)
 
 	//接口
-	//var connector basic.Connector
-	//connector = new(basic.PhoneConnector)
-	//var a = connector.SetName("PC name")
-	//fmt.Printf(a)
-	//fmt.Printf(connector.GetName())
-	//connector.Connect()
+	var connector basic.Connector
+	//connector = new (basic.PhoneConnector)
+	connector = basic.PhoneConnector{"telephone"}
+	connectorName := connector.SetName("IPhone4 ")
+	fmt.Println("connectorName:"+connectorName)
+	fmt.Println("-----------")
+	fmt.Println(connector.GetName())
+	fmt.Println("-----------:")
+	connector.Connect()
+
+	//c:=basic.Cube{3}
+	//var s basic.Shape = c
+	//var o basic.Object= c
+	//fmt.Println("volume of s of interface type shape is",s.Area())
+	//fmt.Println("area of o of interface type object is",o.Volume())
 
 	//map
 	//basic.RangePrintMap()
@@ -79,19 +91,22 @@ func main() {
 	//address := "0.0.0.0:8000"
 	//basic.UdpServer(address)
 
-	jsonStr := `{"host": "http://localhost:9090","port": 9090,"analytics_file": "","static_file_version": 1,
-				"static_dir": "E:/Project/goTest/src/","templates_dir": "E:/Project/goTest/src/templates/",
-				"serTcpSocketHost": ":12340","serTcpSocketPort": 12340,"fruits": ["apple", "peach"]}`
-	map1 := basic.JsonToMap(jsonStr)
-	config := basic.JsonToStruct(jsonStr)
-	jsonStr1 := basic.StructToJson(config)
-	basic.MapToJson(map1)
-	basic.JsonToStruct(jsonStr1)
 
-	arr := []string{"hello", "apple", "python", "golang", "base", "peach", "pear"}
-	jsonStr2 := basic.ArrayToJson(arr)
-	fmt.Println(jsonStr2)
-	arr2 := basic.JsonToArray(jsonStr2)
-	fmt.Println(arr2)
+	// json struct map 转换
+	//jsonStr := `{"host": "http://localhost:9090","port": 9090,"analytics_file": "","static_file_version": 1,
+	//			"static_dir": "E:/Project/goTest/src/","templates_dir": "E:/Project/goTest/src/templates/",
+	//			"serTcpSocketHost": ":12340","serTcpSocketPort": 12340,"fruits": ["apple", "peach"]}`
+	//map1 := basic.JsonToMap(jsonStr)
+	//config := basic.JsonToStruct(jsonStr)
+	//jsonStr1 := basic.StructToJson(config)
+	//basic.MapToJson(map1)
+	//basic.JsonToStruct(jsonStr1)
+
+	// 数组 json 转换
+	//arr := []string{"hello", "apple", "python", "golang", "base", "peach", "pear"}
+	//jsonStr2 := basic.ArrayToJson(arr)
+	//fmt.Println(jsonStr2)
+	//arr2 := basic.JsonToArray(jsonStr2)
+	//fmt.Println(arr2)
 
 }

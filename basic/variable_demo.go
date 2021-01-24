@@ -50,7 +50,7 @@ func PrintPointer() {
 }
 
 //引用类型变量和值类型变量
-func PrintVariableDifferent() {
+func PrintDifferentVariable() {
 	var a1 string = "abcd"
 	var a2 string = a1
 	fmt.Println(&a1)

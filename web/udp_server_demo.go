@@ -1,4 +1,4 @@
-package basic
+package main
 
 import (
 	"fmt"
@@ -36,4 +36,10 @@ func UdpServer(address string) {
 		limitChan <- true
 		go UdpProcess(conn)
 	}
+}
+
+// UDP服务
+func main() {
+	address := "0.0.0.0:8000"
+	UdpServer(address)
 }

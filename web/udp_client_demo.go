@@ -21,9 +21,11 @@ func main() {
 			fmt.Println(err1.Error())
 		}
 	}()
+
 	buf := make([]byte, 2048)
+
+	//读取数据
 	for {
-		//读取数据
 		n, err := conn.Read(buf)
 		if err != nil {
 			fmt.Println(err.Error())

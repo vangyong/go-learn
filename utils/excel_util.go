@@ -10,14 +10,14 @@ import (
 
 func ExchangeExcel() {
 
-	xlsx1, err1 := excelize.OpenFile("./conf/Book1.xlsx")
+	xlsx1, err1 := excelize.OpenFile("./document/Book1.xlsx")
 
 	if err1 != nil {
 		fmt.Println(err1)
 		return
 	}
 
-	xlsx2, err2 := excelize.OpenFile("./conf/Book2.xlsx")
+	xlsx2, err2 := excelize.OpenFile("./document/Book2.xlsx")
 
 	if err2 != nil {
 		fmt.Println(err2)
@@ -88,7 +88,7 @@ func ExchangeExcel() {
 
 	//xlsx2.SetActiveSheet(index2)
 
-	err3 := xlsx2.SaveAs("./conf/Book2.xlsx")
+	err3 := xlsx2.SaveAs("./document/Book2.xlsx")
 	if err3 != nil {
 		fmt.Println(err3)
 	}

@@ -38,7 +38,7 @@ func main() {
 	//connector = new (basic.PhoneConnector)
 	connector = basic.PhoneConnector{"telephone"}
 	connectorName := connector.SetName("IPhone4 ")
-	fmt.Println("connectorName:"+connectorName)
+	fmt.Println("connectorName:" + connectorName)
 	fmt.Println("-----------")
 	fmt.Println(connector.GetName())
 	fmt.Println("-----------:")
@@ -86,11 +86,6 @@ func main() {
 	// WaitGroup变量定义后，是不允许被拷贝的，即不允许作为函数参数或者赋值给其他变量
 	//basic.WaitGroupTest()
 	//fmt.Println("WaitGroupTest end")
-
-	// UDP服务
-	//address := "0.0.0.0:8000"
-	//basic.UdpServer(address)
-
 
 	// json struct map 转换
 	//jsonStr := `{"host": "http://localhost:9090","port": 9090,"analytics_file": "","static_file_version": 1,

@@ -3,8 +3,8 @@ package utils
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"fmt"
-	"json"
 	"net/http"
 	"os"
 	"strings"
@@ -15,7 +15,6 @@ import (
 var out *bufio.Writer
 var errout *bufio.Writer
 
-// structure of JSON-serialised packets
 type RequestPacket struct {
 	SrcIp    string
 	DestIp   string
@@ -23,15 +22,12 @@ type RequestPacket struct {
 	DestPort uint16
 	Time     string
 	Flags    string
-	// TODO: consider providing alternate for serialisation
-	Request *http.Request
+	Request  *http.Request
 }
 
-// Begin capturing network traffic, returning a handle on the capture which can
-// be used to process captured packets.
 func OpenCaptureOrDie() *pcap.Pcap {
 	devs, err := pcap.Findalldevs()
-	if err != "" {
+	if err != nil {
 		fmt.Fprintf(errout, "pcap2json: couldn't find any devices: %s\n", err)
 	}
 	if 0 == len(devs) {
@@ -48,14 +44,13 @@ func OpenCaptureOrDie() *pcap.Pcap {
 	// TODO: support passing filter through on the cmd-line
 	expr := "not port 22"
 	ferr := h.Setfilter(expr)
-	if ferr != "" {
+	if ferr != nil {
 		fmt.Fprintf(out, "pcap2json: %s\n", ferr)
 		out.Flush()
 	}
 	return h
 }
 
-// Return the string representation of the provided packet.
 func PacketAsString(pkt *pcap.Packet) string {
 	buf := bytes.NewBufferString("")
 	for i := uint32(0); i < pkt.Caplen; i++ {
@@ -64,8 +59,6 @@ func PacketAsString(pkt *pcap.Packet) string {
 	return string(buf.Bytes())
 }
 
-// Attempt to extract an HTTP request from the packet and serialise with the
-// provided encoder.
 func SerialisePacket(pkt *pcap.Packet, enc *json.Encoder) {
 	// TODO: serialise packet details for non-HTTP packets
 
@@ -88,8 +81,10 @@ func SerialisePacket(pkt *pcap.Packet, enc *json.Encoder) {
 							req, err := http.ReadRequest(bufio.NewReader(strings.NewReader(verb + unparsed)))
 							// TODO: serialise details of packets we fail to parse
 							if err == nil {
-								rp := RequestPacket{hdr.SrcAddr(), hdr.DestAddr(), tcpHdr.SrcPort, tcpHdr.DestPort, pkt.TimeString(), tcpHdr.FlagsString(), req}
+								rp := RequestPacket{hdr.SrcAddr(), hdr.DestAddr(), tcpHdr.SrcPort, tcpHdr.DestPort, pkt.Time.String(), tcpHdr.FlagsString(), req}
 								enc.Encode(rp)
+							} else {
+
 							}
 						}
 					}

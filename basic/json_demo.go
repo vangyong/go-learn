@@ -24,7 +24,7 @@ type Other struct {
 	Fruits           []string `json:"fruits"`
 }
 
-// json str 转map
+// JsonToMap json str 转map
 func JsonToMap(jsonStr string) map[string]interface{} {
 	var dat map[string]interface{}
 	if err := json.Unmarshal([]byte(jsonStr), &dat); err == nil {
@@ -35,7 +35,7 @@ func JsonToMap(jsonStr string) map[string]interface{} {
 	return dat
 }
 
-// json str 转struct
+// JsonToStruct json str 转struct
 func JsonToStruct(jsonStr string) Config {
 	var config Config
 	if err := json.Unmarshal([]byte(jsonStr), &config); err == nil {
@@ -46,7 +46,7 @@ func JsonToStruct(jsonStr string) Config {
 	return config
 }
 
-// struct转json str
+// StructToJson struct转json str
 func StructToJson(config Config) string {
 	if b, err := json.Marshal(config); err == nil {
 		fmt.Println("================struct 到json str==")
@@ -56,8 +56,7 @@ func StructToJson(config Config) string {
 	return ""
 }
 
-
-// map转json str
+// MapToJson map转json str
 func MapToJson(dat map[string]interface{}) string {
 	fmt.Println("===========map 到json str==============")
 	enc := json.NewEncoder(os.Stdout)
@@ -65,8 +64,7 @@ func MapToJson(dat map[string]interface{}) string {
 	return ""
 }
 
-
-// array 到 json str
+// ArrayToJson array 到 json str
 func ArrayToJson(array []string) string {
 	lang, err := json.Marshal(array)
 	if err == nil {
@@ -76,7 +74,7 @@ func ArrayToJson(array []string) string {
 	return string(lang)
 }
 
-// array 到 json str
+// JsonToArray array 到 json str
 func JsonToArray(jsonStr string) []string {
 	var array []string
 	if err := json.Unmarshal([]byte(jsonStr), &array); err == nil {

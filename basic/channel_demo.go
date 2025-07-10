@@ -5,9 +5,8 @@ func ChannelSum(s []int, c chan int) {
 	for _, v := range s {
 		sum += v
 	}
-	c <- sum  //把 sum 发送到通道 c
+	c <- sum //把 sum 发送到通道 c
 }
-
 
 func Fibonacci(n int, c chan int) {
 	x, y := 0, 1

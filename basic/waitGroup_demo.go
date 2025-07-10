@@ -23,6 +23,5 @@ func GoTest(wg *sync.WaitGroup, index int) {
 		a += i
 	}
 	fmt.Println(index, a)
-
 	wg.Done()
 }

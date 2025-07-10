@@ -13,3 +13,5 @@ http://127.0.0.1:8080
 go run udp_server_demo.go
 
 go run udp_client_demo.go
+
+go run gin_demo.go

@@ -10,6 +10,9 @@ func main() {
 	// 基本数据类型
 	//basic.PrintBaseVariable()
 
+	// 指针
+	//basic.PrintPointer()
+
 	//引用类型和值类型
 	//basic.PrintDifferentVariable()
 	//fmt.Println("PrintDifferentVariable end")
@@ -81,14 +84,14 @@ func main() {
 	//fmt.Println(<-ch)
 
 	//遍历通道与关闭通道
-	//c := make(chan int, 10)
-	//go basic.Fibonacci(cap(c), c)
-	//// range 遍历从通道接收到的数据，因为 c 在发送完 10 个数据之后就关闭了通道，
-	//// 所以这里我们 range 函数在接收到 10 个数据之后就结束了。
-	//// 如果上面的 c 通道不关闭，那么 range 函数就不会结束，从而在接收第 11 个数据的时候就阻塞了。
-	//for i := range c {
-	//	fmt.Println(i)
-	//}
+	c := make(chan int, 10)
+	go basic.Fibonacci(cap(c), c)
+	// range 遍历从通道接收到的数据，因为 c 在发送完 10 个数据之后就关闭了通道，
+	// 所以这里我们 range 函数在接收到 10 个数据之后就结束了。
+	// 如果上面的 c 通道不关闭，那么 range 函数就不会结束，从而在接收第 11 个数据的时候就阻塞了。
+	for i := range c {
+		fmt.Println(i)
+	}
 
 	// json struct map 转换
 	//jsonStr := `{"host": "http://localhost:9090","port": 9090,"analytics_file": "","static_file_version": 1,
@@ -101,10 +104,18 @@ func main() {
 	//basic.JsonToStruct(jsonStr1)
 
 	// 数组 json 转换
-	arr := []string{"hello", "apple", "python", "golang", "base", "peach", "pear"}
-	jsonStr2 := basic.ArrayToJson(arr)
-	fmt.Println(jsonStr2)
-	arr2 := basic.JsonToArray(jsonStr2)
-	fmt.Println(arr2)
+	//arr := []string{"hello", "apple", "python", "golang", "base", "peach", "pear"}
+	//jsonStr2 := basic.ArrayToJson(arr)
+	//fmt.Println(jsonStr2)
+	//arr2 := basic.JsonToArray(jsonStr2)
+	//fmt.Println(arr2)
+
+	//str := "hello 我们"
+	//arr := []rune(str)
+	//arr[3] = '你'
+	//fmt.Println(string(arr))
+	//for _, v := range arr { //rune 类型
+	//	fmt.Println(v)
+	//}
 
 }

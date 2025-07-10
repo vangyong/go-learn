@@ -7,7 +7,7 @@ import (
 )
 
 func SyncWaitGroupTest() {
-	fmt.Println("cpus:" )
+	fmt.Println("cpus:")
 	fmt.Println(runtime.NumCPU())
 	runtime.GOMAXPROCS(runtime.NumCPU())
 	wg := sync.WaitGroup{}
